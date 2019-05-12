@@ -9,6 +9,7 @@ import com.workshop.androidarchitecturecomponents.timer.LiveDataAutoTrigger
 import com.workshop.androidarchitecturecomponents.timer.SimpleAutoTrigger
 import com.workshop.androidarchitecturecomponents.timer.TransformLiveDataAutoTriggerViewModel
 import com.workshop.androidarchitecturecomponents.timer.ViewModelAutoTrigger
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainScreen {
 
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity(), MainScreen {
 
         val timerObserver = Observer<String> {
             Log.d("---->","UI : $it")
-            //text_time.text = it
+            text_time.text = it
         }
 
 
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity(), MainScreen {
     }
 
     override fun showTimer(time: String) {
-        //text_time.text = time
+        text_time.text = time
     }
 
 }
